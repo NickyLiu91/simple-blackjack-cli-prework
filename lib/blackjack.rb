@@ -31,11 +31,11 @@ def initial_round
   card_total
 end
 
-def hit?(total)
+def hit?(card_total)
   prompt_user
   input = get_user_input
   if input == 'h'
-    total = total += deal_card
+    card_total = card_total += deal_card
   elsif input != 'h' || input != 's'
     puts "Please enter a valid command."
     prompt_user
